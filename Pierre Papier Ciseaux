@@ -1,0 +1,64 @@
+const getUsersChoice = userInput => {
+  
+  userInput = userInput.toLowerCase();
+  
+  if (userInput === 'pierre' || userInput === 'papier' || userInput === 'ciseaux' || userInput === 'spock') {
+  return userInput;
+	} else {
+  console.log('Mauvais objet !');
+	}
+}
+
+const getComputerChoice = computerChoice => {
+  
+  computerChoice = Math.floor(Math.random() * 3);
+  
+  switch (computerChoice) {
+    case 0:
+      return 'pierre';
+    case 1:
+      return 'papier';
+    case 2:
+      return 'ciseaux';
+  }
+}
+
+const determineWinner = (userInput, computerChoice) => {
+  if (userInput === 'spock') {
+    return 'GG! Paix et prospérité!';
+  } else if (userInput === computerChoice) {
+    return 'Egualité.';
+  } else if (userInput === 'pierre') {
+    if (computerChoice === 'papier') {
+      return 'L\'ordi a win.';
+    } else {
+      return 'GG!'
+    }
+  } else if (userInput === 'papier') {
+    if (computerChoice === 'ciseaux') {
+      return 'L\'ordi a win.';
+    } else {
+      return 'GG!'
+    }
+  } else if (userInput === 'ciseaux') {
+    if (computerChoice === 'pierre') {
+      return 'L\'ordi a win.';
+    } else {
+      return 'GG!'
+    }
+  } else {
+    
+  }
+}
+
+function playGame() {
+  let userChoice = getUsersChoice('pierre');
+  let computerChoice = getComputerChoice();
+  console.log('Votre choix: ' + userChoice);
+  console.log()
+  console.log('Le choix de l\'ordi: ' + computerChoice);
+  console.log()
+  console.log(determineWinner(userChoice, computerChoice));
+}
+
+playGame();
