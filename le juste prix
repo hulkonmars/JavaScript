@@ -1,0 +1,22 @@
+let randomNumber = Math.round(Math.random() * 50);
+let essai = window.prompt('Trouve le nombre entre 0 et 50 !');
+let essais = 10;
+essai = parseInt(essai, 50);
+
+while (essai != randomNumber && essais > 0) {
+	essais--
+	if (essai > randomNumber) {
+		alert('C\'est moins !')
+	} else {
+		alert('c\'est plus !')
+	}
+	if (essais > 0){
+	essai = window.prompt('Nouveau chiffre');
+	}
+}
+
+if (essai == randomNumber){
+	alert('Bravo !');
+} else {
+	alert('Echec !')
+}
