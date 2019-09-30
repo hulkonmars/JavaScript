@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>test</title>
+		<style>
+			.spoiler-content{
+				display: inline-block;
+				width: 0;
+				height: 0;
+				opacity: 0;
+				overflow: hidden;
+				transition: opacity 0.5s;
+			}
+			.spoiler-content.visible{
+				display: inline;
+				width: auto;
+				height: auto;
+				opacity: 1;
+			}
+		</style>
+	<body>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<p class="spoiler">
+			John Snow meurs a la fin
+		</p>
+		
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum at varius <span class="spoiler">vel pharetra vel turpis.</span> Viverra maecenas accumsan lacus vel facilisis volutpat. Sed lectus vestibulum mattis ullamcorper. Pharetra convallis posuere morbi leo. Curabitur gravida arcu ac tortor dignissim convallis aenean. Cursus mattis molestie a iaculis. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Id eu nisl nunc mi. Sed turpis tincidunt id aliquet risus feugiat in ante. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Purus non enim praesent elementum facilisis leo.
+		</p>
+
+		<script src="script.js"></script>
+
+	</body>
+</html>
